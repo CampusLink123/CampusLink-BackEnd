@@ -13,7 +13,7 @@ const app = experss();
 app.use(cors());
 app.use(experss.json());
 
-//data
+// data
 
 // app.use("/api/data", require("./routes/dataRoute"));
 
@@ -21,9 +21,9 @@ app.use(experss.json());
 
 // app.use("/api/admin", require("./routes/adminUserRoute"));
 
-//user
+// user;
 
-// app.use("/api/user", require("./routes/userRoute"));
+app.use("/api/user", require("./routers/userRoute"));
 
 // app.use(errorHandler);
 
