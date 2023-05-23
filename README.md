@@ -33,10 +33,12 @@ body :
 
 ```
 {
-  "UUID": "9c",
-  "username": "john123",
+  "UUID": "2hs8",
+  "username": "test123",
   "fullname": "John Doe",
   "password": "mypassword",
+  "Class" : "TYIT",
+  "Div" : "B",
   "securityQA": [
     {
       "question": "What is your favorite color?",
