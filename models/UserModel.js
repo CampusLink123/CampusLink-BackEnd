@@ -20,6 +20,14 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  Class: {
+    type: String,
+    required: true,
+  },
+  Div: {
+    type: String,
+    required: true,
+  },
   securityQA: [
     {
       question: {

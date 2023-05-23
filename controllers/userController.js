@@ -33,6 +33,8 @@ const createUser = asyncHandler(async (req, res) => {
     gender,
     age,
     isAlumini,
+    Class,
+    Div,
   } = req.body;
 
   //check that any flead is empty or not
@@ -51,6 +53,8 @@ const createUser = asyncHandler(async (req, res) => {
     username,
     fullname,
     password,
+    Class,
+    Div,
     securityQA,
     profilePic,
     phoneNumber,
