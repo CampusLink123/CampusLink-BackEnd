@@ -9,7 +9,7 @@
 
 ```
 
-http://localhost:6000/api/user/ 
+https://campuslinkbackend.onrender.com/api/user/ 
 
 ```
 
@@ -17,7 +17,7 @@ http://localhost:6000/api/user/
 
 ```
 
-http://localhost:6000/api/user/:UUID 
+https://campuslinkbackend.onrender.com/api/user/:UUID 
 
 ```
 
@@ -25,7 +25,7 @@ http://localhost:6000/api/user/:UUID
 
 ``` 
 
-http://localhost:6000/api/user/ 
+https://campuslinkbackend.onrender.com/api/user/ 
 
 ```
 
@@ -60,7 +60,7 @@ body :
 
 ```
 
-http://localhost:6000/api/user/login/:username/:password
+https://campuslinkbackend.onrender.com/api/user/login/:username/:password
 
 ```
 
