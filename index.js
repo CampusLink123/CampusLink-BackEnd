@@ -1,6 +1,5 @@
 const experss = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
 const connectDb = require("./config/DbConnect");
 // const errorHandler = require("./middleware/errorHandling");
 require("dotenv").config();

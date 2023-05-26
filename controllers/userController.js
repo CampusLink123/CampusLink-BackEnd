@@ -1,12 +1,31 @@
 const asyncHandler = require("express-async-handler");
+const connectDb = require("../config/DbConnect");
 
 const UserModel = require("../models/UserModel");
+const csv = require("csv-parser");
+const fs = require("fs");
 
 const getAllUser = asyncHandler(async (req, res) => {
   const users = await UserModel.find();
 
   res.status(200).json(users);
 });
+
+function checkNumberInCSV(number, filePath) {
+  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const rows = fileContent.split("\n");
+
+  for (let i = 0; i < rows.length; i++) {
+    const rowData = rows[i].split(",");
+    const rowNumber = Number(rowData[0]);
+
+    if (!isNaN(rowNumber) && rowNumber === number) {
+      return true;
+    }
+  }
+
+  return false;
+}
 
 const getUser = asyncHandler(async (req, res) => {
   const UUID = req.params.UUID;
@@ -34,7 +53,8 @@ const createUser = asyncHandler(async (req, res) => {
     age,
     isAlumini,
     Class,
-    Div,
+    div,
+    bio,
   } = req.body;
 
   //check that any flead is empty or not
@@ -54,13 +74,14 @@ const createUser = asyncHandler(async (req, res) => {
     fullname,
     password,
     Class,
-    Div,
+    div,
     securityQA,
     profilePic,
     phoneNumber,
     gender,
     age,
     isAlumini,
+    bio,
   });
 
   if (user) {
@@ -88,4 +109,15 @@ const loginUser = asyncHandler(async (req, res) => {
   res.status(200).json(user);
 });
 
-module.exports = { getAllUser, getUser, createUser, loginUser };
+const verifyUUID = (req, res) => {
+  const number = parseInt(req.params.UUID);
+
+  const isNumberPresent = checkNumberInCSV(
+    number,
+    "C:/Users/shanu/OneDrive - tgv30/CampusLink/backend/CampusLink-BackEnd/uuids.csv"
+  );
+
+  res.status(200).json({ message: `${isNumberPresent}` });
+};
+
+module.exports = { getAllUser, getUser, createUser, loginUser, verifyUUID };

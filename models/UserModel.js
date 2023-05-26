@@ -24,7 +24,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  Div: {
+  div: {
     type: String,
     required: true,
   },
@@ -58,6 +58,10 @@ const userSchema = new Schema({
   },
   isAlumini: {
     type: Boolean,
+    required: true,
+  },
+  bio: {
+    type: String,
     required: true,
   },
 });
