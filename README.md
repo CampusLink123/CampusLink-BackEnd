@@ -74,3 +74,17 @@ This will return the user data if credentials are correct, if not the it will re
 ```
 
 
+## Verify the UUID: (GET)
+
+```
+
+https://campuslinkbackend.onrender.com/api/user/verifyUser/:UUID
+
+```
+
+```
+{
+  "message": "true" or "false"
+}
+```
+
