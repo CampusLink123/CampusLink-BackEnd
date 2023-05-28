@@ -33,28 +33,24 @@ body :
 
 ```
 {
-  "UUID": "2hs8",
-  "username": "test123",
+  "UUID": "71717",
+  "username": "test456",
   "fullname": "John Doe",
   "password": "mypassword",
   "Class" : "TYIT",
-  "Div" : "B",
+  "div" : "B",
   "securityQA": [
     {
       "question": "What is your favorite color?",
       "answer": "blue"
-      
-    },
-    {
-      "question": "What is your pet's name?",
-      "answer": "fluffy"
     }
   ],
-  "profilePic": "https://example.com/profilepic.jpg",
+  "profilePic": "64708f681184d6c890c8720e",
   "phoneNumber": "123-456-7890",
   "gender": "male",
   "age": 25,
-  "isAlumini": true
+  "isAlumini": true,
+  "bio": "hey its me"
 }
 ```
 
@@ -73,4 +69,18 @@ This will return the user data if credentials are correct, if not the it will re
 }
 ```
 
+
+## Verify the UUID: (GET)
+
+```
+
+https://campuslinkbackend.onrender.com/api/user/verifyUser/:UUID
+
+```
+
+```
+{
+  "message": "true" or "false"
+}
+```
 
