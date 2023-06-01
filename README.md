@@ -39,7 +39,7 @@ body :
   "div" : "B",
   "securityQ" : "what color is your bugati",
   "securityA" : "red",
-  "profilePic": "64708f681184d6c890c8720e",
+  "avatar_id": "64708f681184d6c890c8720e",
   "phoneNumber": "123-456-7890",
   "gender": "male",
   "age": 25,

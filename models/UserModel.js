@@ -36,7 +36,7 @@ const userSchema = new Schema({
     type: String,
     required: false,
   },
-  profilePic: {
+  avatar_id: {
     type: String,
     required: false,
   },
