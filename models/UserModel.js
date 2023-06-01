@@ -4,49 +4,45 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   UUID: {
     type: String,
-    required: true,
+    required: false,
     unique: true,
   },
   username: {
     type: String,
-    required: true,
+    required: false,
     unique: true,
   },
   fullname: {
     type: String,
-    required: true,
+    required: false,
   },
   password: {
     type: String,
-    required: true,
+    required: false,
   },
   Class: {
     type: String,
-    required: true,
+    required: false,
   },
   div: {
     type: String,
-    required: true,
+    required: false,
   },
-  securityQA: [
-    {
-      question: {
-        type: String,
-        required: true,
-      },
-      answer: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
+  securityQ: {
+    type: String,
+    required: false,
+  },
+  securityA: {
+    type: String,
+    required: false,
+  },
   profilePic: {
     type: String,
-    required: true,
+    required: false,
   },
   phoneNumber: {
     type: String,
-    required: true,
+    required: false,
   },
   gender: {
     type: String,
@@ -54,15 +50,15 @@ const userSchema = new Schema({
   },
   age: {
     type: Number,
-    required: true,
+    required: false,
   },
   isAlumini: {
     type: Boolean,
-    required: true,
+    required: false,
   },
   bio: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 
