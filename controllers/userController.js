@@ -111,10 +111,29 @@ const loginUser = asyncHandler(async (req, res) => {
   res.status(200).json(user);
 });
 
-const verifyUUID = (req, res) => {
+const verifyUUID = asyncHandler(async (req, res) => {
   const number = parseInt(req.params.UUID);
+  const username = req.params.username;
+
+  //check if that username is already persent in database or not
+  if (
+    await UserModel.findOne({
+      UUID: req.params.UUID,
+    })
+  ) {
+    res.status(400).json({ message: `UUID already taken` });
+  }
+
+  // const user1 =
+  if (
+    await UserModel.findOne({
+      username: username,
+    })
+  ) {
+    res.status(400).json({ message: `username already taken` });
+  }
 
   res.status(200).json({ message: `${uuids.includes(number)}` });
-};
+});
 
 module.exports = { getAllUser, getUser, createUser, loginUser, verifyUUID };
