@@ -18,7 +18,7 @@ https://campuslinkbackend.onrender.com/api/user/:UUID
 
 ```
 
-## Greate new user : (PUSH)
+## Create new user : (PUSH)
 
 ```
 
@@ -69,12 +69,44 @@ This will return the user data if credentials are correct, if not the it will re
 
 ```
 
-https://campuslinkbackend.onrender.com/api/user/verifyUser/:UUID
+https://campuslinkbackend.onrender.com/api/user/verifyUser/:UUID/:username
 
 ```
 
+### If username already taked
 ```
+
 {
-  "message": "true" or "false"
+  "message": "username already taken"
 }
+
+```
+
+### If UUID already taked
+```
+
+{
+  "message": "UUID already taken"
+}
+
+```
+
+
+### If UUID is wrong
+```
+
+{
+  "message": "false"
+}
+
+```
+
+
+### If everything is fine
+```
+
+{
+  "message": "true"
+}
+
 ```
