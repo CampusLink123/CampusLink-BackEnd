@@ -49,7 +49,7 @@ const userSchema = new Schema({
     enum: ["male", "female", "non-binary"],
   },
   age: {
-    type: Number,
+    type: String,
     required: false,
   },
   isAlumini: {
