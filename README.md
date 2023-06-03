@@ -42,7 +42,7 @@ body :
   "avatar_id": "64708f681184d6c890c8720e",
   "phoneNumber": "123-456-7890",
   "gender": "male",
-  "age": 25,
+  "age": "25",
   "isAlumini": false,
   "bio": "hey its me"
 }
